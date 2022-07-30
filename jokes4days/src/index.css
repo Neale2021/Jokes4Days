@@ -19,3 +19,14 @@ a:hover {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.349);
 }
+.topnav a .icon {
+  background: whitesmoke;
+ display: block;
+ position: absolute;
+ right: 0;
+ top: 0;
+ }
+ .header h1 {
+  color: #ffffff;
+   font-size: 48px;
+ }

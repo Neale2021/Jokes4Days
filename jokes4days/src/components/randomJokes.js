@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import '../App.css';
+
 import CategoryButton from '../categoryButton'
 
 
 class RandomJokes extends Component {
     constructor(props) {
       super(props)
-      this.categories = ['Dad', 'Random', 'Geek']
+      this.categories = [ 'Random']
       this.state = {
         currCategory : null,
         currJoke: "",
