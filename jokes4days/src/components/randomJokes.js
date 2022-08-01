@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import '../App.css';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 
 import CategoryButton from '../categoryButton'
+
 
 
 class RandomJokes extends Component {
@@ -17,12 +20,12 @@ class RandomJokes extends Component {
     }
     getCategories() {
         return this.categories.map((cat, i) => {
-          let color = 'rgb(170, 55, 206)'
+          let color = 'black'
           if (this.state.currCategory === cat) {
-            color = '#e59244'
+            color = 'red'
           }
-          return (<li key={cat}>
-            <CategoryButton label={cat} style={{backgroundColor: color}} onClick={(e) => {
+          return (
+            <CategoryButton label='Click Here' style={{backgroundColor: color}} onClick={(e) => {
                   console.log("Setting cur category to: ")
                   console.log(cat)
                   this.setState({ currCategory: cat })
@@ -33,8 +36,8 @@ class RandomJokes extends Component {
                 }
               } 
             />
-          </li>)
-        })}
+          
+        )})}
         getJoke() {
             console.log(this.state.currCategory)
             let cat = this.state.currCategory
@@ -61,18 +64,24 @@ class RandomJokes extends Component {
                  ).catch((err) => { console.log(err.message) })}
            
         render() {
-    
-            return (
-              <div className="App">
-                <p>Click the button, it will give you a new joke!</p>
-                <h2>{this.state.currJoke}</h2>
-                <ul className = "categoryList">
+
+        return (
+           
+          <Card className="custom-class">
+          <Card.Body className='text-center'> 
+            <Card.Header as="h5">RANDOM JOKE</Card.Header>
+          <Card.Title ></Card.Title>
+                  <Card.Text className='text-center'>
                   {this.getCategories()}
-                </ul>
-              
-              </div>
-            );
-          }
-        }
+                  </Card.Text>
+          <Button variant="primary" className='h5'> {this.state.currJoke}</Button>
+          </Card.Body>
+          </Card>
+            
+            )
+                      }
+                      }
+                      
+                      
 
         export default RandomJokes;

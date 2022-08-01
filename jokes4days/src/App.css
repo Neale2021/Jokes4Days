@@ -1,34 +1,50 @@
 .App {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: inline-flexbox;
     height: 100vh;
     font-family: "Rubik", sans-serif;
     color: black;
-    background: lightskyblue;
+    background: lightcyan;
+    
     
   }
-
+  .card.custom-class {
+    background-color: lightcyan;
+    border: hidden;
+  }
+ 
   h1 {
     position: absolute;
     top: 0px;
     text-decoration: solid;
     font-size: 80px;
   }
-  p {
-    position: absolute;
-    top: 200px;
-    font-size: 30px;
+  h2 {
+   position: absolute;
+    top: 300px;
+    left: 300px;
+    text-decoration: solid;
+    font-size: 200px;
+    color: black;
   }
-ul {
-  display: inline-flex;
-  justify-content: space-between;
+  .h5 {
+    text-decoration: wavy;
+    font-size: 300px;
+    background-color: aqua;
+  }
+ 
+.card {
   position: absolute;
-  right: auto;
+  top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+
+ 
+ 
 }
-.App {
-  text-align: center;
-}
+
+
 
 .App-logo {
   height: 40vmin;
@@ -49,7 +65,7 @@ ul {
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
 .App-link {
@@ -65,7 +81,7 @@ ul {
   }
 }
 .topnav a .icon {
-  background: whitesmoke;
+  background: greenyellow;
  display: block;
  position: absolute;
  right: 0;

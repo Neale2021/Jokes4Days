@@ -1,18 +1,19 @@
 import React from "react";
+import '../App.css';
+import '../styles'
 
 
-const styles = { height: '100%', width: '100%' };
-React.createElement("div", { style: styles });
 
 function Home() {
     return (
-      <section>
+  
+  <div className="infoContainer">
     
-  Hello to jokes 4 days
-          
-       
+  <h4>Welcome to jokes 4 days</h4>
+  
+  </div>
       
-    </section>
+
   );
 }
 

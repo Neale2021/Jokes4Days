@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 
 import CategoryButton from '../categoryButton'
 
@@ -17,12 +19,12 @@ class GeekJokes extends Component {
     }
     getCategories() {
         return this.categories.map((cat, i) => {
-          let color = 'rgb(170, 55, 206)'
+          let color = 'black'
           if (this.state.currCategory === cat) {
-            color = '#e59244'
+            color = 'red'
           }
-          return (<li key={cat}>
-            <CategoryButton label={cat} style={{backgroundColor: color}} onClick={(e) => {
+          return (
+            <CategoryButton label='Click Here' style={{backgroundColor: color}} onClick={(e) => {
                   console.log("Setting cur category to: ")
                   console.log(cat)
                   this.setState({ currCategory: cat })
@@ -33,8 +35,8 @@ class GeekJokes extends Component {
                 }
               } 
             />
-          </li>)
-        })}
+          
+        )})}
         getJoke() {
             console.log(this.state.currCategory)
             let cat = this.state.currCategory
@@ -60,18 +62,18 @@ class GeekJokes extends Component {
           }
            
         render() {
-    
-            return (
-              <div className="App">
-                <p>Click the button, it will give you a new joke!</p>
-                <h2>{this.state.currJoke}</h2>
-                <ul className = "categoryList">
-                  {this.getCategories()}
-                </ul>
-              
-              </div>
-            );
-          }
-        }
-
+          return (
+            <Card className="custom-class">
+            <Card.Body className='text-center'> 
+              <Card.Header as="h5">GEEK JOKE</Card.Header>
+            <Card.Title ></Card.Title>
+                    <Card.Text className='text-center'>
+                    {this.getCategories()}
+                    </Card.Text>
+            <Button variant="primary"> {this.state.currJoke}</Button>
+            </Card.Body>
+            </Card>
+              )
+                        }
+                        }
         export default GeekJokes;
