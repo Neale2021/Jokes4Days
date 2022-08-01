@@ -74,7 +74,7 @@ class RandomJokes extends Component {
                   <Card.Text className='text-center'>
                   {this.getCategories()}
                   </Card.Text>
-          <Button variant="primary" className='h5'> {this.state.currJoke}</Button>
+          <Button variant="primary" > {this.state.currJoke}</Button>
           </Card.Body>
           </Card>
             
