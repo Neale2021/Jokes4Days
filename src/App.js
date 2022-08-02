@@ -8,13 +8,15 @@ import './App.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 
+
 function App() {
   return (
     <div className="App">
         <Router>
             <Navigationbar />
             <Switch>
-                <Route exact path='/Home' component={Home}/>
+                <Route exact path='/' component={Home}/>
+                <Route exact path='/home' component={Home}/>
                 <Route path='/dadJokes' component={DadJokes}/>
                 <Route path='/geekJokes' component={GeekJokes}/>
                 <Route path='/randomJokes' component={RandomJokes}/>

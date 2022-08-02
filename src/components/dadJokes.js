@@ -66,19 +66,20 @@ class DadJokes extends Component {
         render() {
     
             return (
-           
-              <Card className="custom-class">
-          <Card.Body className='text-center'> 
-            <Card.Header as="h5">DAD JOKE</Card.Header>
-          <Card.Title ></Card.Title>
-                  <Card.Text className='text-center'>
-                  {this.getCategories()}
-                  </Card.Text>
-          <Button variant="primary" className='h5'> {this.state.currJoke}</Button>
-          </Card.Body>
-          </Card>
-  )
+              <Card style={{ display:'flex', width: '30rem'}}>
+              <Card.Img className="card-img-top" src="./images/Untitled design (10).png" />
+              <Card.Body>
+                <Card.Title>DAD JOKE</Card.Title>
+                <Card.Text>
+                {this.getCategories()}
+                </Card.Text>
+                <Button variant="primary">{this.state.currJoke}</Button>
+              </Card.Body>
+            </Card>
+          );
+        }
+             
             }
-            }
+            
           
 export default DadJokes;
