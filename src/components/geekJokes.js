@@ -2,9 +2,19 @@ import React, { Component } from 'react';
 import '../App.css';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import {Link} from "react-router-dom"
 
 import CategoryButton from '../categoryButton'
 
+function LandingPageButton() {
+  return <Link to="/Home" class="nav-link">
+      <button class="btn btn-info" > 
+          <span style={{"font-size": "24px"}}>
+              Home
+          </span>
+      </button>
+  </Link>
+}
 
 class GeekJokes extends Component {
     constructor(props) {
@@ -63,17 +73,24 @@ class GeekJokes extends Component {
            
         render() {
           return (
-            <Card className="custom-class">
-            <Card.Body className='text-center'> 
-              <Card.Header as="h5">GEEK JOKE</Card.Header>
-            <Card.Title ></Card.Title>
-                    <Card.Text className='text-center'>
-                    {this.getCategories()}
-                    </Card.Text>
-            <Button variant="primary"> {this.state.currJoke}</Button>
+           
+           
+            <Card style={{ display:'flex', width: '30rem'}}>
+            <Card.Img className="card-img-top" src="./images/geek.png" />
+            <Card.Body>
+              <Card.Title>GEEK JOKES</Card.Title>
+              <Card.Text>
+              {this.getCategories()}
+              </Card.Text>
+              <Button variant="primary">{this.state.currJoke}</Button>
             </Card.Body>
-            </Card>
-              )
-                        }
-                        }
+            <div>
+      <LandingPageButton />
+      </div>
+          </Card>
+         
+        );
+      }}
+      
+          
         export default GeekJokes;

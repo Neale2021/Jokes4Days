@@ -2,11 +2,20 @@ import React, { Component} from 'react';
 import '../App.css';
  import Card from 'react-bootstrap/Card';
  import Button from 'react-bootstrap/Button';
+ import {Link} from "react-router-dom"
+
+ import CategoryButton from '../categoryButton'
  
-
-
-import CategoryButton from '../categoryButton'
-
+ function LandingPageButton() {
+   return <Link to="/Home" class="nav-link">
+       <button class="btn btn-info" > 
+           <span style={{"font-size": "24px"}}>
+               Home
+           </span>
+       </button>
+   </Link>
+ }
+ 
 
 
 class DadJokes extends Component {
@@ -75,6 +84,9 @@ class DadJokes extends Component {
                 </Card.Text>
                 <Button variant="primary">{this.state.currJoke}</Button>
               </Card.Body>
+              <div>
+      <LandingPageButton />
+      </div>
             </Card>
           );
         }
