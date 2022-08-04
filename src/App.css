@@ -1,0 +1,105 @@
+.App {
+    display: inline-flexbox;
+    height: 100vh;
+    font-family: "Rubik", sans-serif;
+    color: black;
+    background: #4458be; 
+  }
+ 
+  
+  .card.custom-class {
+    background-color: #4458be;
+    border: hidden;
+    
+    
+  }
+  .card-img-top{
+    width:100%;
+    height:auto;
+  }
+  button-bottom {
+    position:relative;
+    bottom: 0px;
+    left:500px;
+  }
+ 
+  h1 {
+    position: absolute;
+    top: 0px;
+    text-decoration: solid;
+    font-size: 80px;
+  }
+  h4 {
+   position: absolute;
+    top: 300px;
+    left: 300px;
+    text-decoration: solid;
+    font-size: 100px;
+    color: black;
+  }
+  .h5 {
+  justify-content: center;
+    font-size: 300px;
+ 
+  }
+ 
+.card {
+  position: absolute;
+  top: 50px;
+  left: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+
+ 
+ 
+}
+
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.topnav a .icon {
+  background: greenyellow;
+ display: block;
+ position: absolute;
+ right: 0;
+ top: 0;
+ }
+ .header h1 {
+  color: #ffffff;
+   font-size: 48px;
+ }
