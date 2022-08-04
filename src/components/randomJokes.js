@@ -60,7 +60,7 @@ class RandomJokes extends Component {
       
         randomJoke() {
    
-            let url = 'https://v2.jokeapi.dev/'
+            let url = 'https://joke.deno.dev'
              fetch(url, {headers: {'Accept': 'application/json'}})
              
                  .then(res => {
